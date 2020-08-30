@@ -1,7 +1,7 @@
 {
   "name": "kindle-to-arena",
   "version": "1.0.0",
-  "description": "Send your Kindle's highlights and notes to Are.na",
+  "description": "Send your Kindle highlights and notes to Are.na",
   "main": "server.js",
   "engines": {
     "node": "10.15.3"
