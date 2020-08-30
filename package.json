@@ -1,8 +1,9 @@
 {
-  "name": "Kindle to Are.na",
+  "name": "kindle-to-arena",
   "version": "1.0.0",
   "description": "Send your Kindle's highlights and notes to Are.na",
   "main": "server.js",
+  "license": "MIT",
   "scripts": {
     "start:client": "webpack-dev-server --config webpack.config.js",
     "start": "babel-watch ./server.js"
