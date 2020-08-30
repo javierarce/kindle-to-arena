@@ -106,3 +106,4 @@ dist
 
 # ctags
 tags
+.DS_Store
