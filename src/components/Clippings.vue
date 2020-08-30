@@ -173,7 +173,11 @@ export default {
 
       Promise.all(promises).then((data) => {
         this.isLoading = false
-        window.bus.showMessage(`<strong>${data.length} highlight${data.length !== 1 ? 's' : ''}</strong> successfully sent!`)
+
+        let channelTitle = this.selectedChannel.title
+        let channelURL = `https://are.na/${window.bus.user.slug}/${this.selectedChannel.slug}`
+
+        window.bus.showMessage(`<strong>${data.length} highlight${data.length !== 1 ? 's' : ''}</strong> successfully sent to <a target="_blank" href="${channelURL}">${channelTitle}</a>!`)
       })
     },
     close (e) {
@@ -185,7 +189,7 @@ export default {
     },
     sendClipping (content) {
       return new Promise((resolve, reject) => {
-        let channel = this.selectedChannel
+        let channel = this.selectedChannel.slug
 
         let description = `${this.book.title}, ${this.book.source}`
 
@@ -206,8 +210,8 @@ export default {
           })
       })
     },
-    onSelectChannel (slug) {
-      this.selectedChannel = slug
+    onSelectChannel (channel) {
+      this.selectedChannel = channel
     }
   }
 }

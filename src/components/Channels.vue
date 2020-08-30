@@ -55,7 +55,7 @@ export default {
       this.selectedChannelURL = `https://are.na/${window.bus.user.slug}/${channel.slug}`
 
       this.showChannels = false 
-      this.$emit('select', channel.slug)
+      this.$emit('select', channel)
       this.close()
     },
     close () {
