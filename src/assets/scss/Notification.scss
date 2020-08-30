@@ -5,7 +5,6 @@
   justify-content: center;
   align-items: center;
   z-index: 10000;
-  pointer-events: none;
 }
 
 .Notification__message {
@@ -16,6 +15,10 @@
   font-size: 0.9em;
 }
 
+.Notification__message a {
+  color: #fff;
+  font-weight: bold;
+}
 
 .Notification__message strong {
   font-weight: bold;
