@@ -4,7 +4,7 @@
     "description": "Send your Kindle's highlights and notes to Are.na",
     "main": "server.js",
     "engines": {
-      "node": "10.12.0"
+      "node": "10.15.3"
    },
   "scripts": {
     "start:client": "webpack-dev-server --config webpack.config.js",
