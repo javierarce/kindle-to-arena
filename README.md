@@ -1,3 +1,3 @@
-# node-template
+# Kindle to Are.na
 
-Basic node template
+Send your Kindle's highlights and notes to Are.na 
