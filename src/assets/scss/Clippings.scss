@@ -1,0 +1,133 @@
+.Clippings {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Clippings__inner {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 80%;
+  max-width: 900px;
+  height: 80%;
+  background: #fff;
+  border: 1px solid #000;
+  z-index: 1000;
+}
+
+.Clippings__content {
+  position: relative;
+  background: #fff;
+  width: calc(100% - 300px);
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.Clippings__bookTitle {
+  word-break: break-word;
+}
+
+.Clippings__pages {
+  position: absolute;
+  z-index: 1000;
+}
+
+.Clippings__pages {
+  bottom: 0;
+  background: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Clippings__page {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  margin-bottom: 2px;
+  border-top: 1px solid #000;
+}
+
+.Clippings__actions {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-end;
+  padding: 1em 1em 2em 1em;
+  background: #fff;
+}
+
+.Clippings__actions .Clippings__action:last-child {
+  margin: 0;
+}
+
+.Clippings__actions .Clippings__action {
+  margin: 0 0 1em;
+  color: #000;
+}
+
+.Clippings__snippets {
+  padding: 1em;
+}
+
+.Clippings__contentHeader .Link {
+  margin: 0 0 0 0.8em;
+}
+
+.Clippings__contentHeaderActions {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.Clippings__info {
+  background: #000;
+  color: #fff;
+  border-radius:40px;
+  padding: 0.2em .8em;
+}
+
+.Clippings__contentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  padding: 1em 1.2em 1em;
+  font-size: 0.8em;
+  border-bottom: 1px solid #000;
+  z-index: 100000;
+}
+
+.Clippings__header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border-right: 1px solid #000;
+  z-index: 1000;
+}
+
+.Clippings__headerData {
+  padding: 1em;
+  border-left: 10px solid #000;
+}
+
+.Clippings__bookTitle {
+  display: block;
+  font-weight: bold;
+  margin: 0 0 0.2em;
+}
+

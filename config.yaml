@@ -1,0 +1,12 @@
+map:
+  DEFAULT_SEARCH_LOCATION: ""
+  LAT: "39"
+  LON: "-37"
+  ZOOM: "4"
+  FIT_BOUNDS: false
+admin:
+  TITLE: Kindle to Are.na
+  ADMIN_USERNAME: javier
+  MODERATED: false
+  PROTECTED: false
+  ANONYMOUS: false

@@ -1,0 +1,136 @@
+@import 'helpers/reset';
+@import 'helpers/transitions';
+
+@import 'About';
+@import 'Books';
+@import 'Button';
+@import 'Channels';
+@import 'Clippings';
+@import 'Navigation';
+@import 'Pages';
+@import 'Snippets';
+@import 'Notification';
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-size: 1.1em;
+  line-height: 135%;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: #000;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 0;
+  padding: 0;
+  background: #ffd951;
+  transition: background 250ms ease-in-out;
+  background: linear-gradient(125deg, #ffd951 0%, #51ffaf 20%);
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-size: 400% 400%;
+}
+
+a {
+  color: #000;
+  text-decoration: underline;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.code {
+  font-size: .9em;
+  line-height: 135%;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: #000;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+em {
+  font-style: italic;
+}
+
+p {
+  line-height: 135%;
+  margin: 0 0 1em;
+}
+
+body.block-scroll {
+  overflow: hidden;
+}
+
+body.is-dragover .Books__infoInner {
+  background: rgba(#000, 0.1);
+}
+
+.App {
+  height: 100%;
+}
+
+.Home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.Backdrop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0, 0.4);
+  transition: all 250ms ease-in-out;
+  z-index: 100;
+}
+
+
+
+
+.Button.has-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Button .Spinner {
+  position: absolute;
+  top: auto;
+  left: 1em;
+  border-top: 4px solid rgba(0, 0, 0, 0.3);
+  border-right: 4px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 4px solid rgba(0, 0, 0, 0.3);
+  border-left: 4px solid #000;
+}
+
+.Spinner {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  border-top: 4px solid rgba(0, 0, 0, 0.1);
+  border-right: 4px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 4px solid rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #fff;
+  animation: load8 0.8s infinite linear;
+}
+
+.Spinner, .Spinner:after {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.Spinner.is-small {
+  width: 20px;
+  height: 20px;
+}

@@ -1,0 +1,15 @@
+name: Deploy to Glitch
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Glitch Project Sync
+      uses: kanadgupta/glitch-sync@v1.0
+      with:
+        project-id: 56a1a0ad-8d43-4a43-b4a3-133c20b6009f
+        auth-token: a5f7d98f-a18e-4e97-ba05-b3edcbf2b4d5

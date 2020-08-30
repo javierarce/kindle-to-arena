@@ -1,0 +1,84 @@
+
+.Channels__content {
+  position: relative;
+  width: 100%;
+}
+
+.Channels__listInner {
+  height: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+  border: 1px solid #000;
+  border-radius: 4px;
+  background: #fff;
+}
+.Channels__list {
+  position: absolute;
+  height: 300px;
+  bottom: 0px;
+  z-index: 1000;
+}
+
+.Channel.is-public {
+  color: green;
+}
+
+.Channel.is-private {
+  color: red;
+}
+
+.Channel.is-selected,
+.Channel:hover {
+  color: #fff;
+  background: #000;
+}
+
+.Channel {
+  color: #000;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #000;
+  border-radius: 0;
+  padding: 0.8em;
+}
+
+.Channel:last-child {
+  border-bottom: none;
+}
+
+.Channels__title {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Channels.is-selected .Channels__titleChannel {
+  text-align: left;
+}
+
+.Channels.is-selected .Channels__titleChannel {
+  border-right: 1px solid #000;
+}
+
+.Channels__titleChannel {
+  padding: 0.8em 0.8em;
+  width: 100%;
+}
+
+.Channels__visit:hover {
+  transform: translate(3px, 0);
+  box-shadow: none;
+  border:none;
+}
+
+.Channels__visit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8em;
+  text-decoration: none;
+  box-shadow: none;
+  border:none;
+  transition: transform 150ms ease-in-out;
+}

@@ -1,0 +1,16 @@
+.Pages {
+  bottom: 0;
+  background: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Pages__page {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  margin-bottom: 2px;
+  border-top: 1px solid #000;
+}

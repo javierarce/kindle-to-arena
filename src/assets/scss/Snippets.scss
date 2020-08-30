@@ -1,0 +1,53 @@
+.Snippet.is-selected {
+  border-left: 12px solid #000;
+}
+
+.Snippet {
+  border-left: 10px solid transparent;
+  transition: border 120ms ease-in-out, background 120ms ease-in-out;
+  background: #fff;
+  border: 1px solid #000;
+  margin: 0 0 1em;
+  width: 100%;
+  position: relative;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.Snippet.is-note {
+  font-style: italic;
+}
+
+.Snippet__content {
+  margin: 1em;
+  padding: 0.4em;
+  transition: background 150ms ease-in-out;
+  border-radius: 2px;
+}
+
+.Snippet__content:focus {
+  outline: none;
+}
+
+.Snippet__content:hover {
+  outline: none;
+  cursor: text;
+  background: rgba(0,0,0, 0.05);
+}
+
+.Clippings__snippets .Snippet:last-child {
+  margin: 0 0 60px;
+}
+
+.Snippet__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.6em 1em 1.6em;
+  font-size: 0.9em;
+}
+
+.Snippet__datetime {
+  opacity: 0.5;
+}
+

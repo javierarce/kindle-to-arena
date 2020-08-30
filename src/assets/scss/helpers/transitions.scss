@@ -1,0 +1,67 @@
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 150ms;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+
+.slow-fade-enter-active, .slow-fade-leave-active {
+  transition: opacity 250ms;
+}
+.slow-fade-enter, .slow-fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+.notification-enter-active {
+  transition: transform 200ms ease-in-out, opacity 400ms ease-in-out;
+}
+.notification-leave-active {
+  transition: transform 400ms ease-in-out, opacity 200ms ease-in-out;
+}
+.notification-enter, .notification-leave-to {
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.slide-fade-enter-active {
+  transition: all 150ms ease-in-out;
+}
+.slide-fade-leave-active {
+  transition: all 150ms ease-in-out;
+}
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+@keyframes load8 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+
+@-webkit-keyframes slidetounlock {
+  0% {
+    background-position: -720px 0;
+  }
+  100% {
+    background-position: 720px 0;
+  }
+}

@@ -1,0 +1,33 @@
+.Navigation {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1em;
+  z-index: 1000;
+}
+
+.Navigation__actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.Navigation__actions > * {
+  margin: 0 0 0 0.8em;
+}
+
+
+.Navigation .Button {
+  padding: 0.4em 1em;
+  text-decoration: none;
+  background: #fff;
+}
+
+.Navigation__title {
+  font-weight: bold;
+  width: 100%;
+  font-size: 1.4em;
+}
