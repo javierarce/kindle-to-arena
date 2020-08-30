@@ -1,11 +1,11 @@
 {
   "name": "kindle-to-arena",
-    "version": "1.0.0",
-    "description": "Send your Kindle's highlights and notes to Are.na",
-    "main": "server.js",
-    "engines": {
-      "node": "10.15.3"
-   },
+  "version": "1.0.0",
+  "description": "Send your Kindle's highlights and notes to Are.na",
+  "main": "server.js",
+  "engines": {
+    "node": "10.15.3"
+  },
   "scripts": {
     "start:client": "webpack-dev-server --config webpack.config.js",
     "start": "babel-watch ./server.js"
@@ -36,14 +36,14 @@
     "are.na": "^0.1.4",
     "axios": "^0.20.0",
     "body-parser": "^1.19.0",
-    "css-loader": "^3.5.3",
+    "css-loader": "^4.2.2",
     "dotenv": "^8.2.0",
     "express-session": "^1.17.1",
     "extract-loader": "^5.1.0",
     "file-loader": "^6.0.0",
-    "fs": "^0.0.1-security",
-    "helmet": "^3.22.0",
-    "html-webpack-plugin": "^4.3.0",
+    "fs": "0.0.2",
+    "helmet": "^4.1.0",
+    "html-webpack-plugin": "^4.4.0",
     "node-cmd": "^3.0.0",
     "node-sass-middleware": "^0.11.0",
     "passport": "^0.4.1",
@@ -51,13 +51,13 @@
     "path": "^0.12.7",
     "postcss-loader": "^3.0.0",
     "sass": "^1.26.8",
-    "sass-loader": "^8.0.2",
+    "sass-loader": "^10.0.0",
     "schema-utils": "^2.7.0",
     "style-loader": "^1.2.1",
-    "vue": "^2.6.11",
-    "vue-loader": "^15.9.2",
-    "vue-router": "^3.3.2",
-    "vue-template-compiler": "^2.6.11",
+    "vue": "^2.6.12",
+    "vue-loader": "^15.9.3",
+    "vue-router": "^3.4.3",
+    "vue-template-compiler": "^2.6.12",
     "yaml": "^1.10.0",
     "yaml-loader": "^0.6.0"
   }
