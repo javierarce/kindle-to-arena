@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title><%= htmlWebpackPlugin.options.TITLE %></title>
+    <title><%= htmlWebpackPlugin.options.TITLE %> - <%= htmlWebpackPlugin.options.DESCRIPTION %></title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,13 +15,13 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
 
-    <meta property="og:title" content="Kindle to Are.na" />
-    <meta property="og:site_name" content="Kindle to Are.na" />
-    <meta name="twitter:title" content="Kindle to Are.na">
+    <meta property="og:title" content="<%= htmlWebpackPlugin.options.TITLE %>" />
+    <meta property="og:site_name" content="<%= htmlWebpackPlugin.options.TITLE %>" />
+    <meta name="twitter:title" content="<%= htmlWebpackPlugin.options.TITLE %>">
 
-    <meta name="description" content="Send your Kindle highlights and notes to Are.na" />
-    <meta property="og:description" content="Send your Kindle highlights and notes to Are.na" />
-    <meta property="twitter:description" content="Send your Kindle highlights and notes to Are.na" />
+    <meta name="description" content="<%= htmlWebpackPlugin.options.DESCRIPTION %>" />
+    <meta property="og:description" content="<%= htmlWebpackPlugin.options.DESCRIPTION %>" />
+    <meta property="twitter:description" content="<%= htmlWebpackPlugin.options.DESCRIPTION %>" />
 
     <meta name=twitter:image content="https://kindle-to-arena.glitch.me/cover.png">
     <meta property='og:image' content="https://kindle-to-arena.glitch.me/cover.png"/>

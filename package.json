@@ -1,9 +1,8 @@
 {
-  "name": "Kindle",
+  "name": "Kindle to Are.na",
   "version": "1.0.0",
-  "description": "Description",
+  "description": "Send your Kindle's highlights and notes to Are.na",
   "main": "server.js",
-  "license": "MIT",
   "scripts": {
     "start:client": "webpack-dev-server --config webpack.config.js",
     "start": "babel-watch ./server.js"
@@ -14,7 +13,7 @@
     "url": "https://twitter.com/javier"
   },
   "bugs": {
-    "url": "https://github.com/javierarce/kindle/issues"
+    "url": "https://github.com/javierarce/kindle-to-arena/issues"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",

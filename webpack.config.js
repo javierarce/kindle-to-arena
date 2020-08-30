@@ -8,7 +8,7 @@ const YAML = require('yaml')
 const fs = require('fs')
 
 const config = fs.readFileSync('./config.yaml', 'utf8')
-const appConfig = YAML.parse(config).admin
+const appConfig = YAML.parse(config)
 
 module.exports = {
   mode,
@@ -90,6 +90,7 @@ module.exports = {
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       TITLE: appConfig.TITLE,
+      DESCRIPTION: appConfig.DESCRIPTION,
       template: './public/index.html'
     })
   ]
