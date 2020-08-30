@@ -13,7 +13,7 @@
 .About__content {
   border: 1px solid #000;
   background: #fff;
-  max-width: 600px;
+  max-width: 680px;
   z-index: 10000;
 }
 
@@ -37,6 +37,7 @@
   align-items: center;
   font-size: 0.8em;
   padding: 1em;
+  opacity: 0.5;
 }
 
 .About__title { 
