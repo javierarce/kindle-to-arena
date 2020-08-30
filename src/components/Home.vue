@@ -130,13 +130,14 @@ export default {
     },
     onDragEnd () {
       this.dropArea.classList.remove('is-dragover');
+
       if (this.showBooksId) {
         clearTimeout(this.showBooksId)
       }
 
       this.showBooksId = setTimeout(() => {
         this.showBooks = this.books ? true : false
-      }, 200)
+      }, 500)
     },
     setupDropArea () {
       this.dropArea = document.body
@@ -158,6 +159,10 @@ export default {
 
     handleDrop (e) {
       this.isLoading = true
+
+      if (this.showBooksId) {
+        clearTimeout(this.showBooksId)
+      }
 
       window.bus.showMessage('Loading your higlights')
 
