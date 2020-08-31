@@ -45,7 +45,7 @@ export default {
       })
     },
     truncate(str, n) {
-      return (str.length > n) ? str.substr(0, n-1) + '&hellip;' : str;
+      return (str.length > n) ? str.substr(0, n-1) + '&hellip;' : str
     },
     coordinatesToLatLon (coordinates) {
       return [coordinates.lat, coordinates.lon]
@@ -79,8 +79,16 @@ export default {
         })
     },
     getFilenameExtension (filename) {
-      let re = /(?:\.([^.]+))?$/;
+      let re = /(?:\.([^.]+))?$/
       return re.exec(filename)[0]
     },
+    getHash (input) {
+      let hash = 0, len = input.length
+      for (let i = 0; i < len; i++) {
+        hash  = ((hash << 5) - hash) + input.charCodeAt(i)
+        hash |= 0; // to 32bit integer
+      }
+      return hash
+    }
   }
 }

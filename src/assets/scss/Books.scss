@@ -64,6 +64,7 @@
   transform: translateY(-20px);
   box-shadow: 0 10px 10px rgba(0,0,0,.2);
 }
+
 .Book__content {
   padding: 1em;
   border-left: 20px solid #000;
@@ -133,4 +134,22 @@
   justify-content: center;
   align-items: center;
   transition: opacity 250ms ease-in-out;
+}
+
+
+.Books__info.is-small {
+  position: absolute;
+  top: 1em;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 250ms ease-in-out;
+}
+
+.Books__info.is-small .Books__infoInner {
+  padding: 0.4em 1em;
+  font-size: 0.8em;
+  opacity: 0.5;
+  font-weight: 400;
 }

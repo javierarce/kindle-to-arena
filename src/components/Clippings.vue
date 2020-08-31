@@ -1,10 +1,10 @@
 <template>
-  <div class="Clippings">
+  <div class="Clippings" :class="className">
     <transition name="slide-fade">
     <div class="Clippings__inner" v-if="showClippings">
 
       <div class="Clippings__header">
-        <div class="Clippings__headerData">
+        <div class="Spine Clippings__headerData">
           <div class="Clippings__bookTitle" v-html="book.title"></div>
           <div class="Clippings__bookSource" v-html="book.source"></div>
         </div>
@@ -103,6 +103,10 @@ export default {
     }
   },
   computed: {
+    className () {
+      let i = Math.abs(+this.getHash(this.book.title)) % 12
+      return `is-${i}`
+    },
     sendButtonClass () {
       return this.canSend() ? 'is-selected' : 'is-disabled'
     },

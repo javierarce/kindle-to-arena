@@ -1,7 +1,7 @@
 <template>
-  <button class="Book" @click="onClick">
+  <button class="Book" :class="className" @click="onClick">
     <div class="Book__inner">
-      <div class="Book__content">
+      <div class="Spine Book__content">
         <div class="Book__title" v-html="title"></div>
         <div class="Book__source" v-html="source"></div>
         <div class="Book__count" v-html="count"></div>
@@ -32,6 +32,10 @@ export default {
     }
   },
   computed: {
+    className () {
+      let i = Math.abs(+this.getHash(this.data.title)) % 12
+      return `is-${i}`
+    },
     count () {
       let c = this.data.clippings.length
       return `${c} highlight${c !== 1 ? 's' : ''}`
