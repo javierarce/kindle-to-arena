@@ -3,6 +3,7 @@
 
 @import 'About';
 @import 'Books';
+@import 'Spinner';
 @import 'Button';
 @import 'Channels';
 @import 'Clippings';
@@ -45,6 +46,17 @@ a {
 
 strong {
   font-weight: bold;
+}
+
+.Title {
+  position: fixed;
+  top: 2em;
+  left: 0;
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  font-size: 1.4em;
+  z-index: 1;
 }
 
 .code {
@@ -102,42 +114,6 @@ body.is-dragover .Books__infoInner {
 
 
 
-.Button.has-spinner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.Button .Spinner {
-  position: absolute;
-  top: auto;
-  left: 1em;
-  border-top: 4px solid rgba(0, 0, 0, 0.3);
-  border-right: 4px solid rgba(0, 0, 0, 0.3);
-  border-bottom: 4px solid rgba(0, 0, 0, 0.3);
-  border-left: 4px solid #000;
-}
-
-.Spinner {
-  position: fixed;
-  top: 1em;
-  left: 1em;
-  border-top: 4px solid rgba(0, 0, 0, 0.1);
-  border-right: 4px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 4px solid rgba(0, 0, 0, 0.1);
-  border-left: 4px solid #fff;
-  animation: load8 0.8s infinite linear;
-}
-
-.Spinner, .Spinner:after {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-}
-.Spinner.is-small {
-  width: 20px;
-  height: 20px;
-}
-
 .is-0 .Spine { border-color: #F2994A; } 
 .is-1 .Spine { border-color: #6FCF97; } 
 .is-2 .Spine { border-color: #27AE60; } 
@@ -151,3 +127,6 @@ body.is-dragover .Books__infoInner {
 .is-10 .Spine { border-color: #FFEB3B; } 
 .is-11 .Spine { border-color: #000000; } 
 
+.Icon {
+  width: 20px;
+}

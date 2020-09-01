@@ -53,7 +53,8 @@ button {
   box-shadow: 0 6px 0 #000;
   cursor: pointer;
 }
-
-.Icon {
-  width: 20px;
+.Button.has-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

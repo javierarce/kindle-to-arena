@@ -1,6 +1,9 @@
 <template>
   <div class="Home">
+    <h1 class="Title">Kindle to Are.na</h1>
+
     <Notification />
+
     <div class="Spinner" v-if="isLoading"></div>
     <Navigation @about="onShowAbout" />
 
@@ -190,6 +193,7 @@ export default {
         this.isLoading = false
 
         let message = `Sorry, we don't support the <strong>${extension}</strong> extension`
+        this.showBooks = this.books ? true : false
         console.log('error', message);
 
         window.bus.showMessage(message)

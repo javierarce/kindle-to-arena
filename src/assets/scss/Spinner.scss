@@ -1,0 +1,30 @@
+.Button .Spinner {
+  position: absolute;
+  top: auto;
+  left: 1em;
+  border-top: 4px solid rgba(0, 0, 0, 0.3);
+  border-right: 4px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 4px solid rgba(0, 0, 0, 0.3);
+  border-left: 4px solid #000;
+}
+
+.Spinner {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  border-top: 4px solid rgba(0, 0, 0, 0.1);
+  border-right: 4px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 4px solid rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #fff;
+  animation: load8 0.8s infinite linear;
+}
+
+.Spinner, .Spinner:after {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.Spinner.is-small {
+  width: 20px;
+  height: 20px;
+}
