@@ -1,5 +1,6 @@
 <template>
   <div class="Navigation">
+    <h1 class="Navigation__title">Kindle to Are.na</h1>
     <div class="Navigation__actions">
       <button class="Button" @click="onClickAbout">About</button>
       <a :href="URL" class="Button">

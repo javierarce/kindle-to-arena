@@ -1,10 +1,10 @@
 .Navigation {
   position: fixed;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   width: 100%;
-  padding: 1em;
+  padding: 2em;
   z-index: 1000;
 }
 
@@ -12,7 +12,6 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 100%;
 }
 
 .Navigation__actions > * {
@@ -27,6 +26,9 @@
 }
 
 .Navigation__title {
+  left: 0;
+  position: absolute;
+  text-align: center;
   font-weight: bold;
   width: 100%;
   font-size: 1.4em;
