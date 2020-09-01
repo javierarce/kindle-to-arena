@@ -1,10 +1,11 @@
 .Navigation {
+  background: red;
   position: fixed;
+  top: 2em;
+  right: 2em;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 100%;
-  padding: 2em;
   z-index: 1000;
 }
 
