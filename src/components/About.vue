@@ -46,7 +46,7 @@
           </div>
 
             <div class="About__more">
-              <p>This website is in development. If you find a bug (or have a suggestion), please <a href="mailto://javier@hey.com">send me a message</a> or (better yet) create an issue <a href="https://github.com/javierarce/kindle-to-arena">in this GitHub repo</a>. Thanks!</p>
+              <p>This website is in development. If you find a bug (or have a suggestion), please <a target="_blank" href="mailto://javier@hey.com">send me a message</a> or (better yet) create an issue <a href="https://github.com/javierarce/kindle-to-arena">in this GitHub repo</a>. Thanks!</p>
             </div>
         <div class="About__footer">
           <span>
