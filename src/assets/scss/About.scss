@@ -53,6 +53,12 @@
   break-inside: avoid;
 }
 
+
 .About__question:last-child {
   margin: 0;
+}
+
+.About__more {
+  border-top: 1px solid #000;
+  padding: 1em;
 }

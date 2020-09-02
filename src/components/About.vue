@@ -17,7 +17,7 @@
                 very website. You'll then see all of your books and documents, and will
                 be able to send highlights to any of your Are.na channels.</p>
               <p class="is-small"> 
-                If you want to try before you buy, here's a <a target="_blank" href="/My Clippings.txt">My Clippings.txt</a> file just for you.
+                If you want to try before you buy, here's a <a target="_blank" href="/download">My&nbsp;Clippings.txt</a> file just for you.
               </p>
             </div>
 
@@ -41,15 +41,13 @@
               <strong class="About__title">What's with 'We couldn't import X highlights' message?</strong>
               <p>I'm afraid that some original Kindle books have strict limits on how many highlights you can save :(</p>
             </div>
-
-            <div class="About__question">
-              <strong class="About__title">I found a bug/have a suggestion</strong>
-              <p>Sorry slash thanks!</p>
-              <p><a href="mailto://javier@hey.com">Send me a message</a> or (better yet) create an issue <a href="https://github.com/javierarce/kindle-to-arena">in this GitHub repo</a>.</p>
             </div>
-          </div>
-        </div>
 
+          </div>
+
+            <div class="About__more">
+              <p>This website is in development. If you find a bug (or have a suggestion), please <a href="mailto://javier@hey.com">send me a message</a> or (better yet) create an issue <a href="https://github.com/javierarce/kindle-to-arena">in this GitHub repo</a>. Thanks!</p>
+            </div>
         <div class="About__footer">
           <span>
             Made by Javier Arce / <a href="https://are.na/javier" target="_blank">Are.na</a> &middot; <a href="https://twitter.com/javier" target="_blank">Twitter</a>

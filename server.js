@@ -102,6 +102,11 @@ if (process.env.CLIENT_ID && process.env.CLIENT_SECRET) {
 app.get('/auth/arena', passport.authenticate('oauth2'))
 app.get('/auth/arena/callback', passport.authenticate('oauth2', { successRedirect: '/', failureRedirect: '/error' }))
 
+app.get('/download', (request, response) => {
+  const file = `${__dirname}/public/My Clippings.txt`;
+  response.download(file); 
+})
+
 app.get('/api/status', (request, response) => { Brain && Brain.getStatus(request, response)})
 app.post('/api/clippings', (request, response) => { Brain.getClippings(request, response) })
 app.post('/api/publish', (request, response) => { Brain.publishSnippet(request, response)})
