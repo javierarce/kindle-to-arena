@@ -105,8 +105,6 @@ app.get('/auth/arena/callback', passport.authenticate('oauth2', { successRedirec
 app.get('/api/status', (request, response) => { Brain && Brain.getStatus(request, response)})
 app.post('/api/clippings', (request, response) => { Brain.getClippings(request, response) })
 app.post('/api/publish', (request, response) => { Brain.publishSnippet(request, response)})
-app.get('/api/blocks', (request, response) => { Brain.getBlocks(request, response)})
-
 app.get('/api/channels', (request, response) => { Brain.getChannels(request, response)})
 
 app.get('/', function(request, response) {
