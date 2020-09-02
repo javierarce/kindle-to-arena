@@ -118,8 +118,10 @@ export default {
       this.showAbout = false
     },
     closeClippings () {
-      this.$delete(this.books[this.selectedBook.title], 'selected')
-      this.selectedBook = undefined
+      if (this.selectedBook) {
+        this.$delete(this.books[this.selectedBook.title], 'selected')
+        this.selectedBook = undefined
+      }
       this.clippings = []
       this.showClippings = false
     },
@@ -188,6 +190,9 @@ export default {
       let formData = new FormData()
 
       let extension = this.getFilenameExtension(file.name)
+
+      this.closeClippings()
+      this.closeAbout()
 
       if (!this.isValidExtension(extension)) {
         this.isLoading = false
