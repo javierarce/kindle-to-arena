@@ -11,20 +11,24 @@
 
           <div class="About__questions">
             <div class="About__question">
-              <strong class="About__title">How does this website work?</strong>
+              <strong class="About__title">How does this [fantastic] website work?</strong>
               <p>Connect your Kindle to your computer, find the file <span
                   class="code">My&nbsp;Clippings.txt</span>, and drop it into this
-                very website. You'll see all your books and documents and will
+                very website. You'll then see all of your books and documents, and will
                 be able to send highlights to any of your Are.na channels.</p>
+              <p class="is-small"> 
+                If you want to try before you buy, here's a <a target="_blank" href="/My Clippings.txt">My Clippings.txt</a> file just for you.
+              </p>
             </div>
 
             <div class="About__question">
-              <strong class="About__title">Do you store that clippings file somewhere?</strong>
-              <p>Nope! Your file is sent to the server to extract the highlights and notes, but the information is not stored afterwards.</p>
+              <strong class="About__title">Do you store my clippings file somewhere?</strong>
+              <p>Nope! Your file is sent to the server just to extract the
+                highlights and notes, but the information is not stored.</p>
             </div>
 
             <div class="About__question">
-              <strong class="About__title">But if I reload the page the highlights are there!</strong>
+              <strong class="About__title">Wait, but if I reload the page the highlights are there!</strong>
               <p>Yes, they are stored in the Local Storage of your browser.</p>
             </div>
 
@@ -40,7 +44,8 @@
 
             <div class="About__question">
               <strong class="About__title">I found a bug/have a suggestion</strong>
-              <p>Sorry slash thanks! <a href="mailto://javier@hey.com">Send me a message</a> or better yet create an issue <a href="https://github.com/javierarce/kindle-to-arena">in this GitHub repo</a>.</p>
+              <p>Sorry slash thanks!</p>
+              <p><a href="mailto://javier@hey.com">Send me a message</a> or (better yet) create an issue <a href="https://github.com/javierarce/kindle-to-arena">in this GitHub repo</a>.</p>
             </div>
           </div>
         </div>

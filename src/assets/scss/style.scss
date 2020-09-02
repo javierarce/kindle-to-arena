@@ -81,6 +81,19 @@ p {
   margin: 0 0 1em;
 }
 
+p:last-child {
+  margin: 0;
+}
+
+p.is-small {
+  font-size: .8em;
+  color: #999;
+}
+
+p.is-small a {
+  color: #999;
+}
+
 body.block-scroll {
   overflow: hidden;
 }
