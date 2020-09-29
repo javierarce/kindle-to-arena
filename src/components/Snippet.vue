@@ -1,16 +1,17 @@
 <template>
   <div class="Snippet" :class="className" data-parent="true" @click="onSelect">
     <div class="Snippet__content" v-html="content" data-ignore="true" contenteditable ref="content"></div>
-      <div class="Snippet__footer">
-        <div class="Snippet_footerLeft">
-          <transition name="fade">
-          <button class="Link" @click="onClickRevert" data-ignore="true" v-if="modified">Revert content</button>
-          </transition>
-        </div>
-        <div class="Snippet_footerLeft">
-          <div class="Snippet__datetime" v-html="date"></div>
-        </div>
+    <div class="Snippet__footer">
+      <div class="Snippet__footerLeft">
+        <div class="Snippet__action">Select</div>
+        <transition name="fade">
+        <button class="Snippet__revert Link" @click="onClickRevert" data-ignore="true" v-if="modified">Revert</button>
+        </transition>
       </div>
+      <div class="Snippet__footerRight">
+        <div class="Snippet__datetime" v-html="date"></div>
+      </div>
+    </div>
   </div>
 </template>
 
