@@ -12,18 +12,18 @@
           <div class="About__questions">
             <div class="About__question">
               <strong class="About__title">How does this [fantastic] website work?</strong>
-              <p>Connect your Kindle to your computer, find the file <span
-                  class="code">My&nbsp;Clippings.txt</span>, and drop it into this
-                very website. You'll then see all of your books and documents, and will
+              <p>First, connect your Kindle to your computer and then find the file <span
+                  class="code">My&nbsp;Clippings.txt</span> and drop it into this
+                very website.</p><p>You'll see all your books and documents, and will
                 be able to send highlights to any of your Are.na channels.</p>
               <p class="is-small"> 
-                If you want to try before you buy, here's a <a target="_blank" href="/download">My&nbsp;Clippings.txt</a> file just for you.
+                If you want to try before you buy, here's a <a target="_blank" href="/download">clippings</a> file just for you.
               </p>
             </div>
 
             <div class="About__question">
               <strong class="About__title">Do you store my clippings file somewhere?</strong>
-              <p>Nope! Your file is sent to the server just to extract the
+              <p>Nope. Your file is sent to the server just to extract the
                 highlights and notes, but the information is not stored.</p>
             </div>
 
@@ -33,7 +33,7 @@
             </div>
 
             <div class="About__question">
-              <strong class="About__title">I want to edit a highlight before I send it</strong>
+              <strong class="About__title">Ok, let's say I want to edit a highlight before I send it</strong>
               <p>You can click on any text and change it. You can even use Markdown to format the highlight to your liking!</p>
             </div>
 
