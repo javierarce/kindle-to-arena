@@ -12,17 +12,17 @@
           <div class="About__questions">
             <div class="About__question">
               <strong class="About__title">How does this [fantastic] website work?</strong>
-              <p>First, connect your Kindle to your computer and then find the file <span
-                  class="code">My&nbsp;Clippings.txt</span> and drop it into this
+              <p>First, connect your Kindle to your computer, then find the file <span
+                  class="code">My&nbsp;Clippings.txt</span>, and finally drop it into this
                 very website.</p><p>You'll see all your books and documents, and will
-                be able to send highlights to any of your Are.na channels.</p>
+                be able to send highlights to your Are.na channels.</p>
               <p class="is-small"> 
                 If you want to try before you buy, here's a <a target="_blank" href="/download">clippings</a> file just for you.
               </p>
             </div>
 
             <div class="About__question">
-              <strong class="About__title">Do you store my clippings file somewhere?</strong>
+              <strong class="About__title">Do you keep my clippings file somewhere?</strong>
               <p>Nope. Your file is sent to the server just to extract the
                 highlights and notes, but the information is not stored.</p>
             </div>
@@ -38,21 +38,19 @@
             </div>
 
             <div class="About__question">
-              <strong class="About__title">What's with 'We couldn't import X highlights' message?</strong>
-              <p>I'm afraid that some original Kindle books have strict limits on how many highlights you can save :(</p>
+              <strong class="About__title">What's with the 'We couldn't import X highlights' message?</strong>
+              <p>Some original Kindle books have limits on how many highlights you can save :(</p>
             </div>
             </div>
 
-          </div>
 
             <div class="About__more">
-              <p>Hi! If you find a bug (or have a suggestion), please <a target="_blank" href="mailto://javier@hey.com">send me a message</a> or (better yet) create an issue <a href="https://github.com/javierarce/kindle-to-arena">in this GitHub repo</a>. Thanks!</p>
+              <p>If you find a bug or have a suggestion, please <a target="_blank" href="mailto://javier@hey.com">send me a message</a> or (better yet) create an issue <a href="https://github.com/javierarce/kindle-to-arena">in this GitHub repo</a>. Thanks!</p>
             </div>
         <div class="About__footer">
-          <span>
-            Made by Javier Arce / <a href="https://are.na/javier" target="_blank">Are.na</a> &middot; <a href="https://twitter.com/javier" target="_blank">Twitter</a>
+          Made by <a href="https://twitter.com/javier" target="_blank">Javier Arce</a> with ♥ for <a href="https://are.na/javier" target="_blank">Are.na</a>
 
-          </span>
+          </div>
         </div>
       </div>
       <div class="Pages">

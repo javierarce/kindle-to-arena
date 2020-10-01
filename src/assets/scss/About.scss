@@ -33,12 +33,9 @@
 }
 
 .About__footer {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  text-align: right;
+  opacity: 0.5;
   font-size: 0.8em;
-  padding: 1em;
-  border-top: 1px solid #000;
 }
 
 .About__title { 
@@ -46,6 +43,7 @@
   margin: 0 0 .4em;
 }
 .About__questions {
+  margin: 0 0 1em 0;
   column-count: 2;
 }
 .About__question {
@@ -60,6 +58,8 @@
 
 .About__more {
   background: lightyellow;
-  border-top: 1px solid #000;
+  border: 1px solid #000;
   padding: 1em;
+  margin: 0 0 1em;
+  border-radius: 4px;
 }
