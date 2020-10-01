@@ -143,6 +143,7 @@ export default {
       this.countSelectedHighlights()
     },
     checkAll () {
+      this.checkNone()
       this.data.forEach((clipping, i) => {
         this.$set(this.data[i], 'selected', true)
       })
