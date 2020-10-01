@@ -196,8 +196,8 @@ export default {
       return new Promise((resolve, reject) => {
         let channel = this.selectedChannel.slug
 
-        let title = this.book.title
-        let description = `${this.book.title}, ${this.book.source}`
+        let title = this.book.title ? this.book.title.trim() : this.book.title
+        let description = `${title}, ${this.book.source}`
 
         this.post(config.ENDPOINTS.PUBLISH, { channel, title, description, content })
           .then((response) => {
