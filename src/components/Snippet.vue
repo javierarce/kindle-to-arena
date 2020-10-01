@@ -3,7 +3,7 @@
     <div class="Snippet__content" v-html="content" data-ignore="true" contenteditable ref="content"></div>
     <div class="Snippet__footer">
       <div class="Snippet__footerLeft">
-        <div class="Snippet__action">Select</div>
+        <div class="Snippet__action" v-html="toggleSelectText"></div>
         <transition name="fade">
         <button class="Snippet__revert Link" @click="onClickRevert" data-ignore="true" v-if="modified">Revert</button>
         </transition>
