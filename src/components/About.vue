@@ -45,7 +45,7 @@
 
 
             <div class="About__more">
-              <p>If you find a bug or have a suggestion, please <a target="_blank" href="mailto://javier@hey.com">send me a message</a> or (better yet) create an issue <a href="https://github.com/javierarce/kindle-to-arena">in this GitHub repo</a>. Thanks!</p>
+              <p>If you find a bug or have a suggestion, please <a target="_blank" href="mailto://javier@hey.com">send me a message</a> or (better yet) create an issue <a href="https://github.com/javierarce/kindle-to-arena" target="_blank">in this GitHub repo</a>. Thanks!</p>
             </div>
         <div class="About__footer">
           Made by <a href="https://twitter.com/javier" target="_blank">Javier Arce</a> with ♥ for <a href="https://are.na/javier" target="_blank">Are.na</a>
