@@ -62,7 +62,7 @@ app.use(bodyParser.json())
 app.use(helmet())
  
 app.use(session({ 
-  secret: 'my-voice-is-my-passport-verify-me',
+  secret: process.env.SECRET,
   resave: true,
   saveUninitialized: true
 }))
