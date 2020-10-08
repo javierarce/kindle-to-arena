@@ -11,7 +11,7 @@
 
         <div class="Clippings__actions">
           <transition name="slow-fade">
-          <Channels class="Clippings__action" :data="channels" @select="onSelectChannel" />
+          <Channels class="Clippings__action" :data="channels" @select="onSelectChannel" v-if="isLoggedIn" />
           </transition>
 
           <transition name="fade">
