@@ -7,13 +7,21 @@
 }
 
 .Channels__listInner {
-  height: 100%;
+  max-height: 300px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
   overflow: hidden;
   overflow-y: scroll;
   border: 1px solid #000;
   border-radius: 4px;
   background: #fff;
 }
+
+.Channels.is-open .Channels__list {
+  width: 100%;
+}
+
 .Channels__list {
   position: absolute;
   height: 300px;

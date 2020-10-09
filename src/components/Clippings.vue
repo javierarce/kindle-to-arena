@@ -14,6 +14,16 @@
             <Channels class="Clippings__action" :data="channels" @select="onSelectChannel" v-if="isLoggedIn" />
           </transition>
 
+          <transition name="slow-fade">
+          <div class="Collaborate" v-if="selectedChannel">
+            <label for="collaborate">
+              <input class="Collaborate__checkbox" id="collaborate" type="checkbox" v-model="share"><span class="Collaborate__text">Also send to clippings channel</span>
+            </label>
+
+            <div class="Tooltip">?  <span class="Tooltip__text">Checking the box will grant you access as collaborator of the Clippings shared channel and share your highlight there.</span></div>
+          </div>
+          </transition>
+
           <transition name="fade">
           <button class="Button Clippings__action has-spinner" :class="sendButtonClass" @click="onClickSend" v-if="isLoggedIn">
             <span v-html="sendButtonText" ></span>
@@ -94,6 +104,7 @@ export default {
   },
   data () {
     return {
+      share: false,
       isLoggedIn: false,
       isLoading: false,
       selected: false,
@@ -183,8 +194,14 @@ export default {
 
         let channelTitle = this.selectedChannel.title
         let channelURL = `https://are.na/${window.bus.user.slug}/${this.selectedChannel.slug}`
+        let what = `<strong>${data.length} highlight${data.length !== 1 ? 's' : ''}</strong>`
+        let mainChannel = `<a target="_blank" href="${channelURL}">${channelTitle}</a>`
+        let shared = ' and shared'
 
-        window.bus.showMessage(`<strong>${data.length} highlight${data.length !== 1 ? 's' : ''}</strong> successfully sent to <a target="_blank" href="${channelURL}">${channelTitle}</a>!`)
+        let target = `${this.shared ? mainChannel + ' ' + shared : mainChannel }`
+        let message = `${what} successfully sent to ${target}!`
+
+        window.bus.showMessage(message)
       })
     },
     close (e) {
@@ -200,7 +217,8 @@ export default {
 
         let title = this.book.title ? this.book.title.trim() : this.book.title
         let description = `${title}, ${this.book.source}`
-        let params = { channel, title, description, content, collaborate: true }
+        let share = this.share
+        let params = { channel, title, description, content, share }
 
         this.post(config.ENDPOINTS.PUBLISH, params)
           .then((response) => {
