@@ -33,7 +33,6 @@
     "webpack-hot-middleware": "^2.25.0"
   },
   "dependencies": {
-    "are.na": "^0.1.4",
     "axios": "^0.20.0",
     "body-parser": "^1.19.0",
     "css-loader": "^4.2.2",
@@ -41,6 +40,7 @@
     "express-session": "^1.17.1",
     "extract-loader": "^5.1.0",
     "file-loader": "^6.0.0",
+    "form-data": "^3.0.0",
     "fs": "0.0.2",
     "helmet": "^4.1.0",
     "html-webpack-plugin": "^4.4.0",
