@@ -11,7 +11,7 @@
 
         <div class="Clippings__actions">
           <transition name="slow-fade">
-          <Channels class="Clippings__action" :data="channels" @select="onSelectChannel" v-if="isLoggedIn" />
+            <Channels class="Clippings__action" :data="channels" @select="onSelectChannel" v-if="isLoggedIn" />
           </transition>
 
           <transition name="fade">
@@ -82,6 +82,8 @@ import config from '../../config'
 
 import Snippet from './Snippet.vue'
 import Channels from './Channels.vue'
+
+const ERROR_MESSAGE = 'Sorry, there was an error contacting the server.'
 
 export default {
   props: ['data', 'book', 'channels'],
@@ -198,20 +200,21 @@ export default {
 
         let title = this.book.title ? this.book.title.trim() : this.book.title
         let description = `${title}, ${this.book.source}`
+        let params = { channel, title, description, content, collaborate: true }
 
-        this.post(config.ENDPOINTS.PUBLISH, { channel, title, description, content })
+        this.post(config.ENDPOINTS.PUBLISH, params)
           .then((response) => {
             response.json().then((result) => {
               resolve(result)
             }).catch((error) => {
               console.error(error)
-              window.bus.showMessage(`Sorry, there was an error contacting the server.`)
+              window.bus.showMessage(ERROR_MESSAGE)
               reject(error)
             })
           })
           .catch((error) => {
             console.error(error)
-            window.bus.showMessage(`Sorry, there was an error contacting the server.`)
+            window.bus.showMessage(ERROR_MESSAGE)
             reject(error)
           })
       })
