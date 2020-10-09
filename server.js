@@ -56,7 +56,6 @@ if (devServerEnabled) {
   app.use(webpackHotMiddleware(compiler))
 }
 
-
 app.use(express.static('public'))
 app.use(bodyParser.json())
 app.use(helmet())
@@ -111,6 +110,7 @@ app.get('/api/status', (request, response) => { Brain && Brain.getStatus(request
 app.post('/api/clippings', (request, response) => { Brain.getClippings(request, response) })
 app.post('/api/publish', (request, response) => { Brain.publishSnippet(request, response)})
 app.get('/api/channels', (request, response) => { Brain.getChannels(request, response)})
+app.get('/api/collaborate', (request, response) => { Brain.addCollaborator(request, response)})
 
 app.get('/', function(request, response) {
   response.sendFile(__dirname + '/public/index.html')
