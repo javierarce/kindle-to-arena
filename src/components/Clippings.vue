@@ -20,7 +20,7 @@
               <input class="Collaborate__checkbox" id="collaborate" type="checkbox" v-model="share"><span class="Collaborate__text">Also send to clippings channel</span>
             </label>
 
-            <div class="Tooltip">?  <span class="Tooltip__text">Checking the box will grant you access as collaborator of the Clippings shared channel and share your highlight there.</span></div>
+            <div class="Tooltip">?  <span class="Tooltip__text">(BETA) Checking the box will grant you access as collaborator of the Clippings shared channel and share your highlight there.</span></div>
           </div>
           </transition>
 
