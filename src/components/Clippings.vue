@@ -198,7 +198,7 @@ export default {
         let mainChannel = `<a target="_blank" href="${channelURL}">${channelTitle}</a>`
         let shared = ' and shared'
 
-        let target = `${this.shared ? mainChannel + ' ' + shared : mainChannel }`
+        let target = `${this.share ? mainChannel + ' ' + shared : mainChannel }`
         let message = `${what} successfully sent to ${target}!`
 
         window.bus.showMessage(message)
