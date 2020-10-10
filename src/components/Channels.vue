@@ -33,6 +33,7 @@ export default {
   data () {
     return {
       isLoading: true,
+      selectedChannelStatus: undefined,
       selectedChannel: TEXTS.loading,
       selectedChannelID: undefined,
       selectedChannelURL: undefined,
@@ -58,7 +59,17 @@ export default {
   },
   computed: {
     className () {
-      return this.selectedChannelURL ? 'is-selected' : undefined
+      let classes = []
+
+      if (this.selectedChannelStatus) {
+        classes.push(`is-${this.selectedChannelStatus}` )
+      }
+
+      if (this.selectedChannelURL) {
+        classes.push('is-selected' )
+      } 
+
+      return classes.join(' ')
     }
   },
   methods: {
@@ -71,6 +82,7 @@ export default {
       this.selectedChannelID = +e.target.dataset.index
       let channel = this.data[this.selectedChannelID]
       this.selectedChannel = this.truncate(channel.title, 20)
+      this.selectedChannelStatus = channel.status
       this.selectedChannelURL = `https://are.na/${window.bus.user.slug}/${channel.slug}`
 
       this.showChannels = false 

@@ -29,11 +29,13 @@
   z-index: 1000;
 }
 
-.Channel.is-public {
+.Channel.is-public,
+.Channels.is-public .Channels__titleChannel {
   color: green;
 }
 
-.Channel.is-private {
+.Channel.is-private,
+.Channels.is-private .Channels__titleChannel {
   color: red;
 }
 
