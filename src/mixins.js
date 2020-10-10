@@ -47,37 +47,6 @@ export default {
     truncate(str, n) {
       return (str.length > n) ? str.substr(0, n-1) + '&hellip;' : str
     },
-    coordinatesToLatLon (coordinates) {
-      return [coordinates.lat, coordinates.lon]
-    },
-    latLonToCoordinates (latLon) {
-      return { lat: latLon[0], lon: latLon[1] }
-    },
-    getDetails (id, data) {
-      let url = `${config.ENDPOINTS.NOMINATIM}${config.ENDPOINTS.SEARCH_DETAILS_URL}?place_id=${id}&format=json`
-
-      const onGetDetails = (response) => {
-        this.onGetDetails(response, data)
-      }
-
-      this.get(url)
-        .then(onGetDetails.bind(this))
-        .catch((error) => {
-          console.log(error)
-        })
-    },
-    geocode (lat, lng, data) {
-      let url = `${config.GEOCODE_URL}?lat=${lat}&lon=${lng}&zoom=18&format=json`
-
-      let onGetGeocoding = (response) => {
-        this.onGetGeocoding(response, data)
-      }
-      this.get(url)
-        .then(onGetGeocoding.bind(this))
-        .catch((error) => {
-          console.log(error)
-        })
-    },
     getFilenameExtension (filename) {
       let re = /(?:\.([^.]+))?$/
       return re.exec(filename)[0]
@@ -89,6 +58,28 @@ export default {
         hash |= 0; // to 32bit integer
       }
       return hash
+    },
+    saveItemToLocalStorage (key, content) {
+      try {
+        localStorage.setItem(key, JSON.stringify(content))
+      } catch (e) {
+        console.error(e)
+      }
+    },
+    removeItemFromLocalStorage (key) {
+      try {
+        localStorage.removeItem(key)
+      } catch (e) {
+        console.error(e)
+      }
+    },
+    getItemFromLocalStorage (key) {
+      try {
+        return JSON.parse(localStorage.getItem(key)) || undefined
+      } catch (e) {
+        console.error(e)
+        return undefined
+      }
     }
   }
 }

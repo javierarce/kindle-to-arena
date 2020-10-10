@@ -100,19 +100,18 @@ export default {
       document.body.classList.add('block-scroll')
     },
     saveBooksToLocalStorage () {
-      try {
-        localStorage.setItem('books', JSON.stringify(this.books))
-      } catch (e) {
-        console.error(e)
+      this.saveItemToLocalStorage('books', this.books)
+    },
+    loadOpenBook () {
+      let book = this.getItemFromLocalStorage('selected_book')
+
+      if (book && book.title) {
+        this.onShowClippings(book.title)
       }
     },
     loadBooksFromLocalStorage () {
-      try {
-        this.books = JSON.parse(localStorage.getItem('books')) || undefined
-        this.showBooks = this.books ? true : false
-      } catch (e) {
-        console.error(e)
-      }
+      this.books = this.getItemFromLocalStorage('books')
+      this.showBooks = this.books ? true : false
     },
     closeAbout () {
       this.showAbout = false
@@ -261,6 +260,7 @@ export default {
 
         if (this.user) {
           window.bus.$emit(config.ACTIONS.USER, this.user)
+          this.loadOpenBook()
           this.getChannels()
         }
       }).catch((error) => {
@@ -282,9 +282,12 @@ export default {
         })
     },
     onShowClippings (title) {
-      this.selectedBook = this.books[title]
-      this.clippings = this.books[title].clippings
-      this.showClippings = true
+      this.selectedBook = this.books[title] || undefined
+
+      if (this.selectedBook) {
+        this.clippings = this.books[title].clippings
+        this.showClippings = true
+      }
     },
     onShowAbout () {
       this.showAbout = true
