@@ -15,7 +15,7 @@
           </transition>
 
           <transition name="slow-fade">
-          <div class="Collaborate" v-if="selectedChannel">
+          <div class="Collaborate" v-if="false && selectedChannel">
             <label for="collaborate">
               <input class="Collaborate__checkbox" id="collaborate" type="checkbox" v-model="share"><span class="Collaborate__text">Also send to clippings channel</span>
             </label>
@@ -26,7 +26,7 @@
 
           <transition name="fade">
           <button class="Button Clippings__action has-spinner" :class="sendButtonClass" @click="onClickSend" v-if="isLoggedIn">
-            <span v-html="sendButtonText" ></span>
+            <div v-html="sendButtonText" class="Button__text"></div>
             <div class="Spinner is-small" v-if="isLoading"></div>
           </button>
           <button @click="onClickAuth" class="Button Clippings__action" v-else>
@@ -124,7 +124,7 @@ export default {
       return this.canSend() ? 'is-selected' : 'is-disabled'
     },
     sendButtonText () {
-      return `Send ${this.selectedClippingsCount} highlight${this.selectedClippingsCount !== 1 ? 's' : '' }`
+      return `Send <span>${this.selectedClippingsCount}</span> highlight${this.selectedClippingsCount !== 1 ? 's' : '' }`
     }
   },
   mounted () {

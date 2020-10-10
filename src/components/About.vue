@@ -41,7 +41,7 @@
               <p>Some original Kindle books have limits on how many highlights you can save :(</p>
             </div>
 
-            <div class="About__question">
+            <div class="About__question" style="display: none">
               <strong class="About__title">Can I see what other people share?</strong>
               <p>Yes! When you share your highlights you can choose to send
                 them also to the 'Highlights and Notes' channel. By doing that you'll become member of the channel.
