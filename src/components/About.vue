@@ -28,7 +28,8 @@
 
             <div class="About__question">
               <strong class="About__title">Wait, but if I reload the page the highlights are there!</strong>
-              <p>Yes, they are stored in the Local Storage of your browser.</p>
+              <p>Yes, they are stored in the Local Storage of your browser, but you can remove that information clicking this button:</p>
+              <button @click="removeLocalStorage" class="Button">Remove your highlights from your browser</button>
             </div>
 
             <div class="About__question">
@@ -106,6 +107,11 @@ export default {
     bindEvents () {
       window.bus.$off(config.ACTIONS.CLOSE_ABOUT)
       window.bus.$on(config.ACTIONS.CLOSE_ABOUT, this.close)
+    },
+    removeLocalStorage () {
+      this.removeItemFromLocalStorage('books')
+      this.removeItemFromLocalStorage('selected_book')
+      location.reload();
     },
     close (e) {
       this.showAbout = false
