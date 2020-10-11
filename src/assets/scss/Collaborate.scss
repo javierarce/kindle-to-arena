@@ -1,0 +1,35 @@
+.Collaborate {
+  margin: 0 0 1em;
+  font-size: .8em;
+  display: flex;
+}
+
+.Collaborate__help {
+  border-radius: 100px;
+  width: 8px;
+  height: 8px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .9em;
+  background: #000;
+  color: #fff;
+  position: relative;
+  top: 4px;
+  margin-left: 4px;
+}
+
+.Collaborate .Collaborate__text {
+  margin: 0 0 0 2px;
+}
+
+.Collaborate__checkbox {
+  position: relative;
+  top: 1px;
+}
+
+.Collaborate:hover .Collaborate__text {
+  text-decoration: underline;
+  cursor: pointer;
+}

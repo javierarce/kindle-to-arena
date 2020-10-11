@@ -3,14 +3,16 @@
 
 @import 'About';
 @import 'Books';
-@import 'Spinner';
 @import 'Button';
 @import 'Channels';
 @import 'Clippings';
+@import 'Collaborate';
 @import 'Navigation';
+@import 'Notification';
 @import 'Pages';
 @import 'Snippets';
-@import 'Notification';
+@import 'Spinner';
+@import 'Tooltip';
 
 * {
   box-sizing: border-box;
@@ -18,6 +20,12 @@
 
 html, body {
   height: 100%;
+}
+
+:root {
+    --sans-font: -apple-system, BlinkMacSystemFont, "avenir next", avenir,
+    helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial,
+    sans-serif;
 }
 
 body {
@@ -28,7 +36,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   color: #000;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family:var(--sans-font);
   margin: 0;
   padding: 0;
   background: #ffd951;
@@ -48,17 +56,6 @@ strong {
   font-weight: bold;
 }
 
-.Title {
-  position: fixed;
-  top: 2em;
-  left: 0;
-  text-align: center;
-  font-weight: bold;
-  width: 100%;
-  font-size: 1.4em;
-  z-index: 1;
-}
-
 .code {
   background: #f0f0f0;
   border-radius: 2px;
@@ -72,6 +69,7 @@ strong {
   color: #000;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
+
 em {
   font-style: italic;
 }
@@ -124,8 +122,16 @@ body.is-dragover .Books__infoInner {
   z-index: 100;
 }
 
-
-
+.Title {
+  position: fixed;
+  top: 2em;
+  left: 0;
+  text-align: center;
+  font-weight: bold;
+  width: 100%;
+  font-size: 1.4em;
+  z-index: 1;
+}
 
 .is-0 .Spine { border-color: #F2994A; } 
 .is-1 .Spine { border-color: #6FCF97; } 
@@ -142,82 +148,4 @@ body.is-dragover .Books__infoInner {
 
 .Icon {
   width: 20px;
-}
-
-.Collaborate {
-  margin: 0 0 1em;
-  font-size: .8em;
-  display: flex;
-}
-
-.Collaborate__help {
-  border-radius: 100px;
-  width: 8px;
-  height: 8px;
-  padding: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: .9em;
-  background: #000;
-  color: #fff;
-  position: relative;
-  top: 4px;
-  margin-left: 4px;
-}
-
-.Collaborate .Collaborate__text {
-  margin: 0 0 0 2px;
-}
-
-.Collaborate__checkbox {
-  position: relative;
-  top: 1px;
-}
-
-.Collaborate:hover .Collaborate__text {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-
-.Tooltip {
-  position: relative;
-  display: inline-block;
-  margin: 0 0 0 4px;
-  display: inline-flex;
-  text-align: center;
-  vertical-align: baseline;
-  line-height: 133%;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #000;
-  color: #fff;
-  text-indent: 0;
-  cursor: pointer;
-  transition: background 250ms ease-in-out;
-}
-.Tooltip__text {
-  visibility: hidden;
-  font-size: .9em;
-  text-align: center;
-  padding: 12px;
-  border-radius: 4px;
-  line-height: 135%;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  opacity: 0;
-  transition: opacity 250ms ease-in-out;
-  width: 280px;
-  background: #000;
-  color: #fff;
-}
-.Tooltip:hover .Tooltip__text {
-  visibility: visible;
-  opacity: 1;
 }
