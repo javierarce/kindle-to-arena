@@ -2,8 +2,8 @@
   <div class="About">
     <transition name="slide-fade">
     <div class="About__content" v-if="showAbout">
-      <div class="About__inner">
-
+      <div class="About__inner" :class="className">
+        <div class="About__innerContent">
           <div class="About__intro">
             <p>Send your Kindle's highlights and notes to <a target="_blank" href="https://are.na">Are.na</a></p>
           </div>
@@ -64,6 +64,7 @@
           Made by <a href="https://twitter.com/javier" target="_blank">Javier Arce</a> with ♥ for <a href="https://are.na/javier" target="_blank">Are.na</a>
 
           </div>
+          </div>
 
       </div>
       <div class="Pages">
@@ -90,6 +91,11 @@ import config from '../../config'
 
 export default {
   mixins: [mixins],
+  computed: {
+    className () {
+      return `is-${Math.floor(Math.random() * 11)}`
+    }
+  },
   data () {
     return {
       showAbout: false,
