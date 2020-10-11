@@ -54,8 +54,8 @@
         <div class="Clippings__contentHeader">
           <div class="Clippings__info" v-html="info" v-if="book.limited"></div>
           <div class="Clippings__contentHeaderActions">
-            <button class="Link Clippings__action" @click="checkAll">Check all</button>
-            <button class="Link Clippings__action" @click="checkNone">Uncheck all</button>
+            <button class="Link Clippings__action" :class="checkAllClassName" @click="checkAll">Check all</button>
+            <button class="Link Clippings__action" :class="uncheckAllClassName" @click="checkNone">Uncheck all</button>
           </div>
         </div>
 
@@ -116,6 +116,12 @@ export default {
     }
   },
   computed: {
+    checkAllClassName () {
+      return this.selectedClippingsCount === this.data.length ? 'is-disabled' : undefined
+    },
+    uncheckAllClassName () {
+      return !this.selectedClippingsCount ? 'is-disabled' : undefined
+    },
     className () {
       let i = Math.abs(+this.getHash(this.book.title)) % 12
       return `is-${i}`

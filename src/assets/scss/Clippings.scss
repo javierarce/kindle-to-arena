@@ -74,6 +74,11 @@
   color: #000;
 }
 
+.Clippings__action.is-disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
 .Clippings__snippets {
   padding: 1em;
 }
