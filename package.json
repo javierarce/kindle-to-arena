@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Send your Kindle highlights and notes to Arena",
   "main": "server.js",
-  "engines": {
-    "node": "10.15.3"
-  },
   "scripts": {
     "start:client": "webpack-dev-server --config webpack.config.js",
     "start": "babel-watch ./server.js"
