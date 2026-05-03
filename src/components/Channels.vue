@@ -82,7 +82,7 @@ export default {
       this.selectedChannelID = +e.target.dataset.index
       let channel = this.data[this.selectedChannelID]
       this.selectedChannel = this.truncate(channel.title, 20)
-      this.selectedChannelStatus = channel.status
+      this.selectedChannelStatus = channel.visibility
       this.selectedChannelURL = `https://are.na/${window.bus.user.slug}/${channel.slug}`
 
       this.showChannels = false 
@@ -99,7 +99,7 @@ export default {
     channelClass (index) {
       let classes = []
 
-      classes.push(`is-${this.data[index].status}` )
+      classes.push(`is-${this.data[index].visibility}` )
 
       if (this.selectedChannelID === index) {
         classes.push('is-selected' )

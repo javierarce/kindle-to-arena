@@ -42,7 +42,7 @@ export default {
         this.name = 'Log in **'
         this.URL = '/auth/arena'
       } else {
-        this.name = user.username
+        this.name = user.name
         this.URL = `https://are.na/${user.slug}`
         this.isLoggedIn = true
       }

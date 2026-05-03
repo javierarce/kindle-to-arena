@@ -1,5 +1,7 @@
 require('dotenv').config()
 
+const fs = require('fs')
+const https = require('https')
 const path = require('path')
 const express = require('express')
 const app = express()
@@ -80,8 +82,8 @@ passport.deserializeUser((user, done) => {
 
 if (process.env.CLIENT_ID && process.env.CLIENT_SECRET) {
   passport.use(new OAuth2Strategy({
-    authorizationURL: 'https://dev.are.na/oauth/authorize',
-    tokenURL: 'https://dev.are.na/oauth/token',
+    authorizationURL: 'https://www.are.na/oauth/authorize',
+    tokenURL: 'https://api.are.na/v3/oauth/token',
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
     callbackURL: process.env.CALLBACK_URL
@@ -110,12 +112,24 @@ app.get('/api/status', (request, response) => { Brain && Brain.getStatus(request
 app.post('/api/clippings', (request, response) => { Brain.getClippings(request, response) })
 app.post('/api/publish', (request, response) => { Brain.publishSnippet(request, response)})
 app.get('/api/channels', (request, response) => { Brain.getChannels(request, response)})
-app.get('/api/collaborate', (request, response) => { Brain.addCollaborator(request, response)})
 
 app.get('/', function(request, response) {
   response.sendFile(__dirname + '/public/index.html')
 })
 
-const listener = app.listen(process.env.PORT, function() {
-  console.log('Your app is listening on port ' + listener.address().port)
-})
+const port = process.env.PORT
+const keyFile = path.join(__dirname, 'certs', 'key.pem')
+const certFile = path.join(__dirname, 'certs', 'cert.pem')
+
+if (fs.existsSync(keyFile) && fs.existsSync(certFile)) {
+  https.createServer({
+    key: fs.readFileSync(keyFile),
+    cert: fs.readFileSync(certFile)
+  }, app).listen(port, () => {
+    console.log(`Your app is listening on https://localhost:${port}`)
+  })
+} else {
+  app.listen(port, () => {
+    console.log(`Your app is listening on http://localhost:${port}`)
+  })
+}
