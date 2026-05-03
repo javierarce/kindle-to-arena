@@ -32,7 +32,7 @@ window.bus = new Vue({
       window.bus.$emit(config.ACTIONS.SHOW_MESSAGE, message)
     },
     isLoggedIn () {
-      return !!(this.user && this.user.username)
+      return !!(this.user && this.user.slug)
     },
     getTitle () {
       return config.ADMIN.TITLE
