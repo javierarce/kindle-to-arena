@@ -2,7 +2,7 @@
 
 Send your Kindle's highlights and notes to [Are.na](https://are.na).
 
-[Try it online](https://arena.javierarce.com)
+[Try it online](https://arena.javier.computer)
 
 ![Example](/public/example.png "Example")
 
