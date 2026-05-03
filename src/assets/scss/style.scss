@@ -41,10 +41,8 @@ body {
   padding: 0;
   background: #ffd951;
   transition: background 250ms ease-in-out;
-  background: linear-gradient(125deg, #ffd951 0%, #51ffaf 20%);
-  background-repeat: repeat;
-  background-position: 0 0;
-  background-size: 400% 400%;
+  background: linear-gradient(125deg, #ffd951 0%, #51ffaf 100%) fixed;
+  background-repeat: no-repeat;
 }
 
 a {
@@ -108,7 +106,7 @@ body.is-dragover .Books__infoInner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%;
+  min-height: 100%;
 }
 
 .Backdrop {
