@@ -1,18 +1,18 @@
-@import 'helpers/reset';
-@import 'helpers/transitions';
+@use 'helpers/reset';
+@use 'helpers/transitions';
 
-@import 'About';
-@import 'Books';
-@import 'Button';
-@import 'Channels';
-@import 'Clippings';
-@import 'Collaborate';
-@import 'Navigation';
-@import 'Notification';
-@import 'Pages';
-@import 'Snippets';
-@import 'Spinner';
-@import 'Tooltip';
+@use 'About';
+@use 'Books';
+@use 'Button';
+@use 'Channels';
+@use 'Clippings';
+@use 'Collaborate';
+@use 'Navigation';
+@use 'Notification';
+@use 'Pages';
+@use 'Snippets';
+@use 'Spinner';
+@use 'Tooltip';
 
 * {
   box-sizing: border-box;
