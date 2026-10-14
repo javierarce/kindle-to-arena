@@ -212,6 +212,8 @@ export default {
         let message = `${what} successfully sent to ${target}!`
 
         window.bus.showMessage(message)
+      }).catch(() => {
+        this.isLoading = false
       })
     },
     close (e) {
@@ -235,6 +237,10 @@ export default {
 
         this.post(config.ENDPOINTS.PUBLISH, params)
           .then((response) => {
+            if (!response.ok) {
+              throw new Error(`Publish failed with status ${response.status}`)
+            }
+
             response.json().then((result) => {
               resolve(result)
             }).catch((error) => {

@@ -86,7 +86,8 @@ if (process.env.CLIENT_ID && process.env.CLIENT_SECRET) {
     tokenURL: 'https://api.are.na/v3/oauth/token',
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: process.env.CALLBACK_URL
+    callbackURL: process.env.CALLBACK_URL,
+    scope: 'write'
   }, (accessToken, refreshToken, profile, done) => {
 
     Brain = new B(accessToken)
