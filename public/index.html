@@ -15,18 +15,28 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
 
-    <meta property="og:title" content="<%= htmlWebpackPlugin.options.TITLE %>" />
-    <meta property="og:site_name" content="<%= htmlWebpackPlugin.options.TITLE %>" />
-    <meta name="twitter:title" content="<%= htmlWebpackPlugin.options.TITLE %>">
-
     <meta name="description" content="<%= htmlWebpackPlugin.options.DESCRIPTION %>" />
+    <link rel="canonical" href="<%= htmlWebpackPlugin.options.URL %>/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= htmlWebpackPlugin.options.URL %>/" />
+    <meta property="og:site_name" content="<%= htmlWebpackPlugin.options.TITLE %>" />
+    <meta property="og:title" content="<%= htmlWebpackPlugin.options.TITLE %>" />
     <meta property="og:description" content="<%= htmlWebpackPlugin.options.DESCRIPTION %>" />
-    <meta property="twitter:description" content="<%= htmlWebpackPlugin.options.DESCRIPTION %>" />
+    <meta property="og:locale" content="en_US" />
 
-    <meta name=twitter:image content="https://arena.javierarce.com/cover.png">
-    <meta property='og:image' content="https://arena.javierarce.com/cover.png"/>
+    <meta property="og:image" content="<%= htmlWebpackPlugin.options.URL %>/cover.png" />
+    <meta property="og:image:secure_url" content="<%= htmlWebpackPlugin.options.URL %>/cover.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="2009" />
+    <meta property="og:image:height" content="1005" />
+    <meta property="og:image:alt" content="Kindle → Are.na, in white text on a black background" />
 
-    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="<%= htmlWebpackPlugin.options.TITLE %>" />
+    <meta name="twitter:description" content="<%= htmlWebpackPlugin.options.DESCRIPTION %>" />
+    <meta name="twitter:image" content="<%= htmlWebpackPlugin.options.URL %>/cover.png" />
+    <meta name="twitter:image:alt" content="Kindle → Are.na, in white text on a black background" />
 
     <script async defer data-domain="arena.javierarce.com" src="https://stats.javierarce.com/js/plausible.js"></script>
   </head>
