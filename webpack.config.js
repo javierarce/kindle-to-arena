@@ -91,6 +91,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       TITLE: appConfig.TITLE,
       DESCRIPTION: appConfig.DESCRIPTION,
+      URL: appConfig.URL,
       template: './public/index.html'
     })
   ]
